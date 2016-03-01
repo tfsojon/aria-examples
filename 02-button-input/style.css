@@ -1,0 +1,7 @@
+[role="tooltip"] {
+  display: none;
+}
+
+input:focus + [role="tooltip"] {
+	display: block;
+}

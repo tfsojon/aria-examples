@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Accessible input tooltips with no javascript</title>
+    <link rel="stylesheet" href="./style.css" charset="utf-8">
+    <link rel="stylesheet" href="../global.css" charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <fieldset>
+          <legend>Add or subtract ten</legend>
+        	<div>
+        	  <label for="number">Current value</label>
+        	  <input type="text" role="alert" aria-live="assertive" readonly value="0" id="number" />
+        	  <button type="button" title="add 10" aria-controls="number">Add</button>
+        	  <button type="button" title="subtract 10" aria-controls="number">Subtract</button>
+        	</div>
+        </fieldset>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function respondToClick() {
+        var textField = document.getElementById('number')
+        if (this.textContent === 'Add') {
+          textField.value = parseInt(textField.value, 10) + 10;
+        } else {
+          textField.value = parseInt(textField.value, 10) - 10;
+        }
+      }
+      
+      document.getElementsByTagName('button')[0].onclick = respondToClick;
+      document.getElementsByTagName('button')[1].onclick = respondToClick;
+    </script>
+  </body>
+</html>

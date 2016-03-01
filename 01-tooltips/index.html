@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Accessible input tooltips with no javascript</title>
+    <link rel="stylesheet" href="./style.css" charset="utf-8">
+    <link rel="stylesheet" href="../global.css" charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <fieldset>
+          <legend>Login form</legend>
+          <div>
+            <label for="username">Your username</label>
+        	  <input type="text" id="username" aria-describedby="username-tip" required />
+        	  <div role="tooltip" id="username-tip">Your username is your email address</div>
+        	</div>
+        	<div>
+        	  <label for="password">Your password</label>
+        	  <input type="text" id="password" aria-describedby="password-tip" required />
+        	  <div role="tooltip" id="password-tip">Was emailed to you when you signed up</div>
+        	</div>
+          <div>
+            <button type="submit" name="button">Submit form</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
