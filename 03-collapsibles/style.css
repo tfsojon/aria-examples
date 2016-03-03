@@ -1,0 +1,7 @@
+.collapsible h3 + [aria-hidden="true"] {
+    display: none;
+}
+
+.collapsible h3 + [aria-hidden="false"] {
+    display: block;
+}
