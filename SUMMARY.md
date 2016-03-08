@@ -2,4 +2,5 @@
 
 * Tooltips
 * Button Input
+* Collapsibles
 
